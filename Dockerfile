@@ -4,4 +4,4 @@ RUN curl -o /usr/local/src/rundeck-launcher.jar http://dl.bintray.com/rundeck/ru
 
 EXPOSE 4440
 
-CMD ["java", "-jar", "/usr/local/src/rundeck-launcher.jar"]
+CMD ["java", "-Dserver.hostname=localhost", "-jar", "/usr/local/src/rundeck-launcher.jar"]
