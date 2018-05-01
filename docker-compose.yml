@@ -4,11 +4,13 @@ services:
   rundeck:
     build: .
     #environment:
+    #  - "RDECK_HOSTNAME=test.rundeck.u6k.me"
     #  - "VIRTUAL_HOST=test.rundeck.u6k.me"
     #  - "VIRTUAL_PORT=4440"
     #  - "LETSENCRYPT_HOST=test.rundeck.u6k.me"
     #  - "LETSENCRYPT_EMAIL=u6k.apps@gmail.com"
     volumes:
+    #  - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "rundeck_etc:/opt/rundeck/etc/"
       - "rundeck_projects:/opt/rundeck/projects/"
       - "rundeck_config:/opt/rundeck/server/config/"
