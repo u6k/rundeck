@@ -9,6 +9,7 @@ services:
     #  - "LETSENCRYPT_HOST=test.rundeck.u6k.me"
     #  - "LETSENCRYPT_EMAIL=u6k.apps@gmail.com"
     volumes:
+    #  - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "rundeck_etc:/opt/rundeck/etc/"
       - "rundeck_projects:/opt/rundeck/projects/"
       - "rundeck_config:/opt/rundeck/server/config/"
