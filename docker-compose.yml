@@ -4,6 +4,7 @@ services:
   rundeck:
     build: .
     #environment:
+    #  - "RDECK_HOSTNAME=test.rundeck.u6k.me"
     #  - "VIRTUAL_HOST=test.rundeck.u6k.me"
     #  - "VIRTUAL_PORT=4440"
     #  - "LETSENCRYPT_HOST=test.rundeck.u6k.me"
