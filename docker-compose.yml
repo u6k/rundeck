@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  rundeck:
+    build: .
+    #environment:
+    #  - "VIRTUAL_HOST=test.rundeck.u6k.me"
+    #  - "VIRTUAL_PORT=4440"
+    #  - "LETSENCRYPT_HOST=test.rundeck.u6k.me"
+    #  - "LETSENCRYPT_EMAIL=u6k.apps@gmail.com"
+    ports:
+      - "4440:4440"
+
+#networks:
+#  default:
+#    external:
+#      name: docker_default
