@@ -1,6 +1,8 @@
 FROM openjdk:8
 
-RUN curl -o /usr/local/src/rundeck-launcher.jar http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-2.11.0.jar
+ENV RDECK_VERSION=2.11.0
+
+RUN curl -o /usr/local/src/rundeck-launcher-${RDECK_VERSION}.jar http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-${RDECK_VERSION}.jar
 
 EXPOSE 4440
 
