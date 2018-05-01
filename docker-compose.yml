@@ -8,8 +8,26 @@ services:
     #  - "VIRTUAL_PORT=4440"
     #  - "LETSENCRYPT_HOST=test.rundeck.u6k.me"
     #  - "LETSENCRYPT_EMAIL=u6k.apps@gmail.com"
+    volumes:
+      - "rundeck_etc:/opt/rundeck/etc/"
+      - "rundeck_projects:/opt/rundeck/projects/"
+      - "rundeck_config:/opt/rundeck/server/config/"
+      - "rundeck_data:/opt/rundeck/server/data/"
+      - "rundeck_logs:/opt/rundeck/var/logs/"
     ports:
       - "4440:4440"
+
+volumes:
+  rundeck_etc:
+    driver: local
+  rundeck_projects:
+    driver: local
+  rundeck_config:
+    driver: local
+  rundeck_data:
+    driver: local
+  rundeck_logs:
+    driver: local
 
 #networks:
 #  default:
