@@ -15,10 +15,6 @@ ENV RDECK_VERSION=2.11.0 \
 RUN curl -o /usr/local/src/rundeck-launcher-${RDECK_VERSION}.jar http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-${RDECK_VERSION}.jar && \
     java -jar /usr/local/src/rundeck-launcher-${RDECK_VERSION}.jar --installonly -b ${RDECK_BASE}
 
-ENV RDECK_URL=http:\\/\\/localhost:4440 \
-    RDECK_ADMIN_USER=admin \
-    RDECK_ADMIN_PASS=pass
-
 COPY entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
 
@@ -30,6 +26,14 @@ RUN mkdir -p ${RDECK_BASE}/libext && \
 RUN apt -y install awscli
 
 # Setting Container
+ENV RDECK_URL=http:\\/\\/localhost:4440 \
+    RDECK_ADMIN_USER=admin \
+    RDECK_ADMIN_PASS=pass \
+    AWS_ACCESS_KEY_ID=xxx \
+    AWS_SECRET_ACCESS_KEY=xxx \
+    AWS_DEFAULT_REGION=us-east-1 \
+    AWS_S3_ENDPOINT=xxx
+
 VOLUME ["/opt/rundeck/projects/", "/opt/rundeck/server/data/", "/opt/rundeck/var/logs/"]
 
 EXPOSE 4440
