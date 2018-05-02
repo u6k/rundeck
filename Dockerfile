@@ -26,6 +26,9 @@ RUN chmod +x /opt/entrypoint.sh
 RUN mkdir -p ${RDECK_BASE}/libext && \
     curl -L -o ${RDECK_BASE}/libext/slack-incoming-webhook-plugin-1.1.jar https://github.com/rundeck-plugins/slack-incoming-webhook-plugin/releases/download/v1.1/slack-incoming-webhook-plugin-1.1.jar
 
+# Install AWS CLI
+RUN apt -y install awscli
+
 # Setting Container
 VOLUME ["/opt/rundeck/projects/", "/opt/rundeck/server/data/", "/opt/rundeck/var/logs/"]
 
