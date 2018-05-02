@@ -4,27 +4,23 @@ services:
   rundeck:
     build: .
     #environment:
-    #  - "RDECK_HOSTNAME=test.rundeck.u6k.me"
+    #  - "RDECK_URL=https:\\/\\/test\\.rundeck\\.u6k\\.me"
+    #  - "RDECK_ADMIN_USER=admin"
+    #  - "RDECK_ADMIN_PASS=pass"
     #  - "VIRTUAL_HOST=test.rundeck.u6k.me"
     #  - "VIRTUAL_PORT=4440"
     #  - "LETSENCRYPT_HOST=test.rundeck.u6k.me"
     #  - "LETSENCRYPT_EMAIL=u6k.apps@gmail.com"
     volumes:
-    #  - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "rundeck_etc:/opt/rundeck/etc/"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "rundeck_projects:/opt/rundeck/projects/"
-      - "rundeck_config:/opt/rundeck/server/config/"
       - "rundeck_data:/opt/rundeck/server/data/"
       - "rundeck_logs:/opt/rundeck/var/logs/"
     ports:
       - "4440:4440"
 
 volumes:
-  rundeck_etc:
-    driver: local
   rundeck_projects:
-    driver: local
-  rundeck_config:
     driver: local
   rundeck_data:
     driver: local
