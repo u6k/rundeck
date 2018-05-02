@@ -22,6 +22,10 @@ ENV RDECK_URL=http:\\/\\/localhost:4440 \
 COPY entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
 
+# Install Rundeck plugin
+RUN mkdir -p ${RDECK_BASE}/libext && \
+    curl -L -o ${RDECK_BASE}/libext/slack-incoming-webhook-plugin-1.1.jar https://github.com/rundeck-plugins/slack-incoming-webhook-plugin/releases/download/v1.1/slack-incoming-webhook-plugin-1.1.jar
+
 # Setting Container
 VOLUME ["/opt/rundeck/projects/", "/opt/rundeck/server/data/", "/opt/rundeck/var/logs/"]
 
