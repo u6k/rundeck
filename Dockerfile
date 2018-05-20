@@ -12,7 +12,7 @@ RUN apt-get update && \
 ENV RDECK_VERSION=2.11.0 \
     RDECK_BASE=/opt/rundeck
 
-RUN curl -o /usr/local/src/rundeck-launcher-${RDECK_VERSION}.jar http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-${RDECK_VERSION}.jar && \
+RUN curl -L -o /usr/local/src/rundeck-launcher-${RDECK_VERSION}.jar http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-${RDECK_VERSION}.jar && \
     java -jar /usr/local/src/rundeck-launcher-${RDECK_VERSION}.jar --installonly -b ${RDECK_BASE}
 
 COPY entrypoint.sh /opt/entrypoint.sh
