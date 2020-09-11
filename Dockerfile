@@ -1,4 +1,4 @@
-FROM rundeck/rundeck:3.2.5
+FROM rundeck/rundeck:3.2.9
 LABEL maintainer="u6k.apps@gmail.com"
 
 # Install softwares
