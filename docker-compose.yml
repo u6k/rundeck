@@ -10,6 +10,7 @@ services:
       - "rundeck_data:/home/rundeck/server/data"
       - "./realm.properties:/home/rundeck/server/config/realm.properties"
       - "/dev/null:/home/rundeck/etc/rundeckpro-license.key"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
     ports:
       - "4440:4440"
 
