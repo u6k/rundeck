@@ -11,7 +11,7 @@ RUN sudo apt-get update && \
 # Install softwares
 RUN sudo apt-get update && \
     sudo apt-get upgrade -y && \
-    sudo apt-get install -y postgresql-client-12 awscli p7zip-full build-essential python3 python3-pip && \
+    sudo apt-get install -y postgresql-client-12 awscli p7zip-full build-essential python3 python3-pip mariadb-client && \
     sudo apt-get clean && \
     pip3 install --upgrade pip requests
 
