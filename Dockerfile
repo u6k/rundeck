@@ -1,4 +1,4 @@
-FROM rundeck/rundeck:3.2.9
+FROM rundeck/rundeck:3.4.3
 LABEL maintainer="u6k.apps@gmail.com"
 
 # Setup postgresql 12 repository
