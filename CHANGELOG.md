@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [#9246: [Rundeck]CIをGitHub Actionsに、コンテナレジストリをGitHub Container Registryに移行する](https://redmine.u6k.me/issues/9246)
 
+### Fixed
+- [#9245: dockerコマンドがPermission deniedエラーになってしまう](https://redmine.u6k.me/issues/9245)
+
 ## [20210515] - 2021-05-15
 ### Added
 - [#9006: LinkAceをバックアップする](https://redmine.u6k.me/issues/9006)

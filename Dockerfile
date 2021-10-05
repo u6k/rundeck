@@ -26,7 +26,8 @@ RUN sudo apt-get update && \
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - && \
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
     sudo apt-get update && \
-    sudo apt-get -y install docker-ce-cli
+    sudo apt-get -y install docker-ce-cli && \
+    echo rundeck ALL=NOPASSWD: /usr/bin/docker | sudo tee -a /etc/sudoers
 
 # Install Rundeck plugin
 RUN curl -L -o /home/rundeck/libext/slack-incoming-webhook-plugin.jar https://github.com/rundeck-plugins/slack-incoming-webhook-plugin/releases/download/v1.2.5/slack-incoming-webhook-plugin-1.2.5.jar
