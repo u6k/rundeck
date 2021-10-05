@@ -1,6 +1,11 @@
 FROM rundeck/rundeck:3.4.3
 LABEL maintainer="u6k.apps@gmail.com"
 
+# Setup timezone
+RUN sudo apt-get update && \
+    sudo apt-get install -y tzdata
+ENV TZ=Asia/Tokyo
+
 # Setup postgresql 12 repository
 RUN sudo apt-get update && \
     sudo apt-get install -y lsb-release curl ca-certificates gnupg && \
