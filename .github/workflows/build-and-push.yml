@@ -8,7 +8,7 @@ on:
 env:
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
   IMAGE_NAME: rundeck
-  IMAGE_VERSION: 20230515
+  IMAGE_VERSION: 20230516-dev
 
 jobs:
   build_and_push:
