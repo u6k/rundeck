@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- [#9957: Rundeckを最新化する](https://redmine.u6k.me/issues/9957)
+
 ## [20211005] - 2021-10-05
 ### Added
 - [#9246: [Rundeck]CIをGitHub Actionsに、コンテナレジストリをGitHub Container Registryに移行する](https://redmine.u6k.me/issues/9246)
